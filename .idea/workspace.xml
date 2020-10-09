@@ -4,11 +4,6 @@
     <list default="true" id="1e69c90b-7a73-4cfa-8080-a9c7a805755f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cidade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cidade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Estado.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Estado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EstadoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EstadoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_08_002758_create_estados_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_08_002758_create_estados_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

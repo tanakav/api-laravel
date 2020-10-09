@@ -2,9 +2,9 @@
 
 API simples que tem como recursos usuário, endereço, cidade e estados.
 
-##Recursos
+## Recursos
 
-###Usuário
+### Usuário
 
 - id: Unsigned BigInt
 - nome: String(varchar)
@@ -12,26 +12,26 @@ API simples que tem como recursos usuário, endereço, cidade e estados.
 - cidade_id : Unsigned BigInt
 - estado_id: Unsigned BigInt
 
-###Endereço
+### Endereço
 
 - id: Unsigned BigInt
 - logradouro: String(varchar)
 
-###Cidade
+### Cidade
 
 - id: Unsigned BigInt
 - nome: String(varchar)
 
-###Estado
+### Estado
 
 - id: Unsigned BigInt
 - abreviacao: String(varchar)
 
-##Endpoints
+## Endpoints
 
 Como não alterei no RouteServiceProvider, por padrão, todos os endpoints do Laravel de api são precedidos pelo prefixo /api. 
 
-### CRUD de usuário
+### Usuário
 - Lista de usuários
 
     `GET /api/usuarios`
@@ -52,7 +52,7 @@ Como não alterei no RouteServiceProvider, por padrão, todos os endpoints do La
 
     `DELETE /api/usuarios/{id}`
 
-###Endereços
+### Endereços
 - Obter endereços
 
     `GET /api/enderecos`
@@ -61,7 +61,7 @@ Como não alterei no RouteServiceProvider, por padrão, todos os endpoints do La
 
     `GET /api/enderecos/{id}`
 
-###Cidades
+### Cidades
 - Obter Cidades
 
     `GET /api/cidades`
@@ -78,7 +78,7 @@ Como não alterei no RouteServiceProvider, por padrão, todos os endpoints do La
 
     `GET /api/cidades/{id}/numero-usuarios`
 
-###Estados
+### Estados
 - Obter Estados
 
     `GET /api/estados`
@@ -102,7 +102,7 @@ Como nenhuma dependência adicional foi utilizada, a instalação é padrão do 
     composer install
     php artisan migrate --seed
     
-##Testes
+## Testes
 
 Para os testes utilizei o Insomnia rodando no servidor local com:
     
