@@ -12,7 +12,7 @@ class Cidade extends Model
 
     public static function usuariosPorCidade(){
         return $rows = DB::table('cidades')
-            ->select('cidades.id','cidades.nome', DB::raw("count(usuarios.id)"))
+            ->select('cidades.id','cidades.nome', DB::raw("count(usuarios.id) as usuarios"))
             ->join('usuarios','usuarios.cidade_id','cidades.id')
             ->groupBy('cidades.id')
             ->get();
@@ -20,7 +20,7 @@ class Cidade extends Model
 
     public static function usuariosPorCidadeId($id){
         return $rows = DB::table('cidades')
-            ->select('cidades.id','cidades.nome', DB::raw("count(usuarios.id)"))
+            ->select('cidades.id','cidades.nome', DB::raw("count(usuarios.id) as usuarios"))
             ->where('cidades.id',$id)
             ->join('usuarios','usuarios.cidade_id','cidades.id')
             ->groupBy('cidades.id')

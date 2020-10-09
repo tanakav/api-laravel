@@ -25,7 +25,7 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Estado::create($request->all());
     }
 
     /**
@@ -48,7 +48,10 @@ class EstadoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $estado = Estado::findOrFail($id);
+        $estado->update($request->all());
+
+        return $estado;
     }
 
     /**
@@ -59,10 +62,21 @@ class EstadoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $estado = Estado::findOrFail($id);
+        $estado->delete();
+
+        return 200;
     }
 
-    public function usuariosPorEstado($id){
+    public function usuariosPorEstado(){
+
+        return Estado::usuariosPorEstado();
+
+    }
+
+    public function usuariosPorEstadoId($id){
+
+        return Estado::usuariosPorEstadoId($id);
 
     }
 }

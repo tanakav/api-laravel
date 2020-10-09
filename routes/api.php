@@ -42,7 +42,8 @@ Route::prefix('/cidades')->group(function(){
 
 Route::prefix('/estados')->group(function(){
     Route::get('','EstadoController@index');
-    Route::get('{id}/numero-usuarios', 'EstadoController@usuariosPorEstado');
+    Route::get('numero-usuarios', 'EstadoController@usuariosPorEstado');
+    Route::get('{id}/numero-usuarios', 'EstadoController@usuariosPorEstadoId');
     Route::get('/{id}','EstadoController@show');
     Route::put('/{id}','EstadoController@update');
     Route::post('','EstadoController@store');
