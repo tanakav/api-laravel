@@ -14,7 +14,7 @@ class EnderecoController extends Controller
      */
     public function index()
     {
-        //
+        return Endereco::all();
     }
 
     /**
@@ -34,9 +34,9 @@ class EnderecoController extends Controller
      * @param  \App\Endereco  $endereco
      * @return \Illuminate\Http\Response
      */
-    public function show(Endereco $endereco)
+    public function show($id)
     {
-        //
+        return Endereco::findOrFail($id);
     }
 
     /**
@@ -46,7 +46,7 @@ class EnderecoController extends Controller
      * @param  \App\Endereco  $endereco
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Endereco $endereco)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -57,7 +57,7 @@ class EnderecoController extends Controller
      * @param  \App\Endereco  $endereco
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Endereco $endereco)
+    public function destroy($id)
     {
         //
     }

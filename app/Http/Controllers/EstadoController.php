@@ -14,7 +14,7 @@ class EstadoController extends Controller
      */
     public function index()
     {
-        //
+        return Estado::all();
     }
 
     /**
@@ -34,9 +34,9 @@ class EstadoController extends Controller
      * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function show(Estado $estado)
+    public function show($id)
     {
-        //
+        return Estado::findOrFail($id);
     }
 
     /**
@@ -46,7 +46,7 @@ class EstadoController extends Controller
      * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Estado $estado)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -57,8 +57,12 @@ class EstadoController extends Controller
      * @param  \App\Estado  $estado
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Estado $estado)
+    public function destroy($id)
     {
         //
+    }
+
+    public function usuariosPorEstado($id){
+
     }
 }

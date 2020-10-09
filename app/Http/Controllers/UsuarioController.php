@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UsuarioRequest;
 use App\Usuario;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return Usuario::create($request->all());
     }
 
     /**
@@ -34,9 +35,9 @@ class UsuarioController extends Controller
      * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function show(Usuario $usuario)
+    public function show($id)
     {
-        return Usuario::find($usuario);
+        return Usuario::findOrFail($id);
     }
 
     /**
@@ -46,9 +47,12 @@ class UsuarioController extends Controller
      * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Usuario $usuario)
+    public function update($id, Request $request)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->update($request->all());
+
+        return $usuario;
     }
 
     /**
@@ -57,8 +61,11 @@ class UsuarioController extends Controller
      * @param  \App\Usuario  $usuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Usuario $usuario)
+    public function destroy($id)
     {
-        //
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
+
+        return 200;
     }
 }
